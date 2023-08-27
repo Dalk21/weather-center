@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read: TORNADO API</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #ffffff;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      .background {
+        background-image: url('https://the-weather.xyz/cdn/bg/1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.75);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      href {
+        color: #fff;
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+        max-width: 1000px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 300px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card::before {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .card:hover::before {
+        opacity: 0;
+      }
+
+      .card img {
+        border-radius: 50%;
+        height: 100px;
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 1px 1px 0 #ddd;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      .card button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5;
+        color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>READ: Tornado API</h1>
+    <p>Database: <a href="/api/database/tornado">https://the-weather.xyz/api/database/tornado</a></p>
+    <p>
+        Introduction:
+
+This documentation provides the structure of a database of every EF5 tornado in JSON format. The database includes information on each tornado's name, description, date, fatalities, rating, location name, location zip code, and coordinates.<br>
+
+JSON Structure:<br>
+
+The JSON file is structured as follows:<br>
+
+The database is enclosed within a single object named "tornadoes".<br>
+The "tornadoes" object contains an array of objects that store information about individual tornadoes.<br>
+Each tornado object contains the following fields:<br>
+"name" (string): The name of the tornado.<br>
+"description" (string): A brief description of the tornado and its impact.<br>
+"date" (string): The date on which the tornado occurred.<br>
+"fatalities" (integer): The number of fatalities caused by the tornado.<br>
+"rating" (string): The EF scale rating of the tornado.<br>
+"locationName" (string): The name of the location where the tornado occurred.<br>
+"locationZipCode" (integer): The zip code of the location where the tornado occurred.<br>
+"coordinates" (array of two numbers): The latitude and longitude coordinates of the location where the tornado occurred.<br>
+JSON Example:<br>
+
+Here is an example of how the JSON file would look like:<br>
+
+{<br>
+"tornadoes": [<br>
+{<br>
+"name": "1953 Waco Tornado",<br>
+"description": "Many large, multi-story buildings in downtown Waco were completely leveled, along with homes both north and south of Waco. First officially ranked F5 tornado in the United States",<br>
+"date": "May 11th, 1953",<br>
+"fatalities": 114,<br>
+"rating": "F5",<br>
+"locationName": "Waco, TX",<br>
+"locationZipCode": 76701,<br>
+"coordinates": [31.551389, -97.155833]<br>
+},<br>
+{<br>
+"name": "1953 North Dakota Tornado",<br>
+"description": "A large church was leveled and pews were jammed 4 ft (1.2 m) into the ground. Car parts were carried for 1⁄2 mi (0.80 km). The tornado was initially rated F4 by Grazulis, but he subsequently upgraded it to F5.",<br>
+"date": "May 29th, 1953",<br>
+"fatalities": 2,<br>
+"rating": "F5",<br>
+"locationName": "Fort Rice, ND",<br>
+"locationZipCode": 58554,<br>
+"coordinates": [46.5261324, -100.6049302]<br>
+}<br>
+]<br>
+}<br>
+
+Conclusion:<br>
+
+This database structure can be used to store information about every EF5 tornado, allowing users to retrieve and analyze data about these rare and devastating natural disasters. It can be easily implemented into any programming language or database management system that supports JSON.
+    </p>
+  </div>

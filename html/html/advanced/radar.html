@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Advanced Radar</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The advanced weather radar!">
+        <meta name="description" content="Get the advanced weather radar product!">
+        <meta name="theme-color" content="#6c25be">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://the-weather.xyz/advanced/radar">
+        <meta property="og:title" content="The advanced weather radar!">
+        <meta property="og:description" content="Get the advanced weather radar!">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://the-weather.xyz/advanced/radar">
+        <meta property="twitter:title" content="The advanced weather radar!">
+        <meta property="twitter:description" content="Get the advanced weather radar!">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      
+      /* CSS styles */
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 60px; bottom: 0; width: 100%; }
+    header { background-color: #333; color: #fff; padding: 20px; position: absolute; top: 0; left: 0; width: 100%; }
+    h1 { margin: 0; font-size: 24px; }
+    a { color:white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Radar Products via the-weather.xyz. Have any questions? Email them to <a href="/email/admin">admin@the-weather.xyz</a>. <a href="/">Home.</a> <a href="/radar">Normal Radar.</a></h1>
+  </header>
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGFsa2dnIiwiYSI6ImNsZ2RubGw2ajBhZmwzeHBpdTZsdzcyMG4ifQ.YXEX-PUrpvMqK_1v_e0I_A';
+    var tornadoes = [
+    {
+      "name": "Tri-State Tornado",
+      "description": "The deadliest and longest-lasting tornado outbreak in US history, this EF5 tornado caused significant damage in Illinois, Missouri, and Indiana. It killed 695 people and injured over 2,000 others.",
+      "coordinates": [-89.476, 37.713]
+    },
+    {
+      "name": "Woodward Tornado",
+      "description": "This EF5 tornado struck Woodward, Oklahoma on April 14, 2012, causing significant damage and killing 6 people. The tornado was on the ground for over an hour and had a maximum width of 1.1 miles.",
+      "coordinates": [-99.237, 36.441]
+    },
+    {
+      "name": "Joplin Tornado",
+      "description": "One of the deadliest tornadoes in US history, this EF5 tornado struck Joplin, Missouri on May 22, 2011, killing 158 people and causing over $2 billion in damages. The tornado had a maximum width of 1 mile.",
+      "coordinates": [-94.530, 37.081]
+    },
+    {
+      "name": "Moore Tornado",
+      "description": "This EF5 tornado struck Moore, Oklahoma on May 20, 2013, killing 24 people and causing over $2 billion in damages. The tornado had a maximum width of 1.3 miles and was on the ground for approximately 40 minutes.",
+      "coordinates": [-97.550, 35.340]
+    },
+    {
+      "name": "El Reno Tornado",
+      "description": "This EF5 tornado struck near El Reno, Oklahoma on May 31, 2013, causing significant damage and killing 8 people, including storm chaser Tim Samaras. The tornado was the widest tornado ever recorded, with a maximum width of 2.6 miles.",
+      "coordinates": [-97.950, 35.537]
+    },
+    {
+      "name": "Tuscaloosa-Birmingham Tornado",
+      "description": "This EF5 tornado struck Tuscaloosa, Alabama and Birmingham, Alabama on April 27, 2011, killing 64 people and causing over $2.4 billion in damages. The tornado had a maximum width of 1.5 miles and was on the ground for over an hour.",
+      "coordinates": [-87.531, 33.313]
+    },
+    {
+      "name": "Andover Tornado",
+      "description": "This EF5 tornado struck near Andover, Kansas on April 26, 1991, causing significant damage and killing 17 people. The tornado had a maximum width of 1 mile and was on the ground for over an hour.",
+      "coordinates": [-97.136, 37.690]
+    },
+    {
+      "name": "Jarrell Tornado",
+      "description": "This EF5 tornado struck Jarrell, Texas on May 27, 1997, killing 27 people and causing significant damage. The tornado had a maximum width of 1.3 miles and was on the ground for approximately 7 minutes.",
+      "coordinates": [-97.615, 30.665]
+    },
+    {
+      "name": "Bridge Creek-Moore Tornado",
+      "description": "This EF5 tornado struck near Bridge Creek, Oklahoma and Moore, Oklahoma on May 3, 1999, causing significant damage.",
+      "coordinates": [-97.550, 35.340]
+    },
+{
+  "name": "Hallam Tornado",
+  "description": "This EF5 tornado struck Hallam, Nebraska on May 22, 2004, causing significant damage and killing one person. The tornado had a maximum width of 2.5 miles and was on the ground for approximately 1 hour and 20 minutes.",
+  "coordinates": [-96.645, 40.561]
+},
+{
+  "name": "Greensburg Tornado",
+  "description": "This EF5 tornado struck Greensburg, Kansas on May 4, 2007, causing significant damage and killing 11 people. The tornado had a maximum width of 1.7 miles and was on the ground for approximately 1 hour and 20 minutes.",
+  "coordinates": [-99.283, 37.609]
+},
+{
+  "name": "Philippines Tornado",
+  "description": "This EF5 tornado struck the Philippines on November 8, 2013, as part of Typhoon Haiyan. The tornado caused significant damage and killed at least 6 people.",
+  "coordinates": [124.701, 11.232]
+}
+  ]
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v10',
+      center: [-97.4867, 35.3395],
+      zoom: 8
+    });
+
+    map.on('load', function() {
+      map.addSource('radar', {
+        type: 'raster',
+        tiles: ['https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913/{z}/{x}/{y}.png'],
+        tileSize: 256,
+        opacity: 0.85
+      });
+
+      map.addLayer({
+        id: 'radar-layer',
+        type: 'raster',
+        source: 'radar',
+        minzoom: 0,
+        maxzoom: 18
+      });
+
+tornadoes.forEach(tornado => {
+                new mapboxgl.Marker()
+                .setLngLat(tornado.coordinates)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`<h3>${tornado.name}</h1><p>${tornado.description}</p>`))
+                .addTo(map);
+})
+
+// Define an array of NWS office locations
+fetch('https://api.weather.gov/radar/stations')
+        .then(response => response.json())
+        .then(data => {
+          const offices = data.features
+            .map(station => {
+              const name = station.properties.name;
+              const coords = station.geometry.coordinates;
+              return new mapboxgl.Marker()
+                .setLngLat(coords)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML(`<h3>${name} [ ${station.properties.id} ]</h3><p>Local Time Zone: ${station.properties.timeZone}<br>Local Time: ${new Date().toLocaleTimeString('en-US', { timeZone: station.properties.timeZone })}<br>Radar Type: ${station.properties.stationType}<br>Station ID: ${station.properties.id}</p>`))
+                .addTo(map);
+            });
+        })
+        .catch(error => {
+          console.log('Error fetching NWS stations data:', error);
+        });
+      var mooreOK = new mapboxgl.Marker()
+        .setLngLat([-97.5187, 35.3273])
+        .setPopup(new mapboxgl.Popup({ offset: 25 })
+        .setHTML("<h3>Moore, OK 2013 Tornado</h3><p>A destructive EF5 tornado struck Moore, Oklahoma on May 20, 2013. It had peak winds estimated at 210 mph and was responsible for 24 fatalities and 212 injuries.</p>"))
+        .addTo(map);
+      var twistex = new mapboxgl.Marker()
+        .setLngLat([-97.9009456, 35.4790036])
+        .setPopup(new mapboxgl.Popup({ offset: 25 })
+        .setHTML("<h3>Team TWISTEX Memorial</h3><p>The El Reno tornado was a very large and strong tornado that occurred on May 31, 2013, near El Reno, Oklahoma. It was classified as an EF3 tornado, being downgraded from an EF5 (the highest rating). It has the record of being the widest tornado ever. During the tornado, a team of researchers from TWISTEX, including founder Tim Samaras, his son Paul Samaras, and colleague Carl Young, were killed. The TWISTEX team was well-known for their work in studying tornadoes and developing advanced weather instrumentation to gather data from inside tornadoes. Their deaths were a devastating loss for the meteorology community and highlighted the dangers of tornado research.</p>"))
+        .addTo(map);
+    }); 
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <title>Radar</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The weather radar!">
+        <meta name="description" content="Get the weather radar product!">
+        <meta name="theme-color" content="#6c25be">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://the-weather.xyz/radar">
+        <meta property="og:title" content="The weather radar, right now!">
+        <meta property="og:description" content="Get the weather radar!">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://the-weather.xyz/radar">
+        <meta property="twitter:title" content="The weather radar!">
+        <meta property="twitter:description" content="Get the weather radar!">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      
+      /* CSS styles */
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 60px; bottom: 0; width: 100%; }
+    header { background-color: #333; color: #fff; padding: 20px; position: absolute; top: 0; left: 0; width: 100%; }
+    h1 { margin: 0; font-size: 24px; }
+    a { color:white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Radar Products via the-weather.xyz. Have any questions? Email them to <a href="/email/admin">admin@the-weather.xyz</a>. <a href="/">Home.</a> <a href="/advanced/radar">Advanced Radar.</a></h1>
+  </header>
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGFsa2dnIiwiYSI6ImNsZ2RubGw2ajBhZmwzeHBpdTZsdzcyMG4ifQ.YXEX-PUrpvMqK_1v_e0I_A';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v10',
+      center: [-97.4867, 35.3395],
+      zoom: 8
+    });
+
+    map.on('load', function() {
+      map.addSource('radar', {
+        type: 'raster',
+        tiles: ['https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913/{z}/{x}/{y}.png'],
+        tileSize: 256,
+        opacity: 0.85
+      });
+
+      map.addLayer({
+        id: 'radar-layer',
+        type: 'raster',
+        source: 'radar',
+        minzoom: 0,
+        maxzoom: 18
+      });
+    }); 
+
+    
+  </script>
+</body>
+</html>

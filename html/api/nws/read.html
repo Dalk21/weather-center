@@ -1,0 +1,292 @@
+<!--  This is an unused document for the old NWS API that we had. This is discontinued but can be remade using my npm package, nws-wrapper -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read: TORNADO API</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #ffffff;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      href {
+        color: #fff;
+      }
+
+      .background {
+        background-image: url('https://the-weather.xyz/cdn/bg/1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.75);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+        max-width: 1000px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 300px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card::before {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .card:hover::before {
+        opacity: 0;
+      }
+
+      .card img {
+        border-radius: 50%;
+        height: 100px;
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 1px 1px 0 #ddd;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      .card button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5;
+        color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>READ: Custom NWS API</h1>
+    <p>Radar: <a href="/api/wx/radar/lat,lon">https://the-weather.xyz/api/wx/radar/LAT,LON</a></p><br>
+    <p>Hourly: <a href="/api/wx/hourly/lat,lon">https://the-weather.xyz/api/wx/hourly/LAT,LON</a></p><br>
+    <p>Weekly: <a href="/api/wx/weekly/lat,lon">https://the-weather.xyz/api/wx/weekly/LAT,LON</a></p><br>
+    <p>Right Now: <a href="/api/wx/daily/lat,lon">https://the-weather.xyz/api/wx/daily/LAT,LON</a></p><br>
+    <p>
+<br>Documentation for Custom NWS API:
+
+<br>Introduction:
+<br>
+<br>This API provides access to National Weather Service (NWS) weather forecasts and alerts, as well as radar images. The API is RESTful and provides data in JSON format. There are five endpoints that you can use to get weather information, which are:
+<br>
+<br>Hourly forecast
+<br>Weekly forecast
+<br>Daily forecast
+<br>Weather alerts
+<br>Radar image
+<br>All endpoints require latitude and longitude coordinates to be provided in the URL as parameters.
+<br>
+<br>API Base URL:
+<br>https://api.weather.gov
+<br>
+<br>Endpoint 1: Hourly forecast
+<br>This endpoint provides hourly weather forecasts for the next few days at a given location.
+<br>
+<br>URL:
+<br>/api/wx/hourly/:lat,:lon
+<br>
+<br>HTTP Method:
+<br>GET
+<br>
+<br>Parameters:
+<br>
+<br>lat: The latitude of the location for which you want to retrieve weather information
+<br>lon: The longitude of the location for which you want to retrieve weather information
+<br>Response:
+<br>The API returns a JSON object containing the hourly forecast for the first period (next hour) of the location provided. The response includes the following fields:
+<br>
+<br>temperature
+<br>windSpeed
+<br>windDirection
+<br>shortForecast
+<br>detailedForecast
+<br>Endpoint 2: Weekly forecast
+<br>This endpoint provides weekly weather forecasts for the next several days at a given location.
+<br>
+<br>URL:
+<br>/api/wx/weekly/:lat,:lon
+<br>
+<br>HTTP Method:
+<br>GET
+<br>
+<br>Parameters:
+<br>
+<br>lat: The latitude of the location for which you want to retrieve weather information
+<br>lon: The longitude of the location for which you want to retrieve weather information
+<br>Response:
+<br>The API returns a JSON object containing the weekly forecast for the location provided. The response includes the following fields for each day:
+<br>
+<br>name
+<br>startTime
+<br>endTime
+<br>isDaytime
+<br>temperature
+<br>windSpeed
+<br>windDirection
+<br>shortForecast
+<br>detailedForecast
+<br>Endpoint 3: Daily forecast
+<br>This endpoint provides daily weather forecasts for the next several days at a given location.
+<br>
+<br>URL:
+<br>/api/wx/daily/:lat,:lon
+<br>
+<br>HTTP Method:
+<br>GET
+<br>
+<br>Parameters:
+<br>
+<br>lat: The latitude of the location for which you want to retrieve weather information
+<br>lon: The longitude of the location for which you want to retrieve weather information
+<br>Response:
+<br>The API returns a JSON object containing the daily forecast for the first period (next day) of the location provided. The response includes the following fields:
+<br>
+<br>name
+<br>startTime
+<br>endTime
+<br>isDaytime
+<br>temperature
+<br>windSpeed
+<br>windDirection
+<br>shortForecast
+<br>detailedForecast
+<br>Endpoint 4: Weather alerts
+<br>This endpoint provides active weather alerts for a given location.
+<br>
+<br>URL:
+<br>/api/wx/alerts/:lat,:lon
+<br>
+<br>HTTP Method:
+<br>GET
+<br>
+<br>Parameters:
+<br>
+<br>lat: The latitude of the location for which you want to retrieve weather information
+<br>lon: The longitude of the location for which you want to retrieve weather information
+<br>Response:
+<br>The API returns a JSON object containing the active weather alerts for the location provided. The response includes the following fields for each alert:
+<br>
+<br>event
+<br>headline
+<br>description
+<br>severity
+<br>urgency
+<br>certainty
+<br>effective
+<br>expires
+<br>instruction
+<br>Endpoint 5: Radar image
+<br>This endpoint provides a radar image for a given location.
+<br>
+<br>URL:
+<br>/api/wx/radar/:lat,:lon
+<br>
+<br>HTTP Method:
+<br>GET
+<br>
+<br>Parameters:
+<br>
+<br>lat: The latitude of the location for which you want to retrieve weather information
+<br>lon: The longitude of the location for which you want to retrieve weather information
+<br>Response:
+<br>The API returns a redirect to a radar image for the location provided. The image is a loop of the latest radar images from the National Weather Service.
+    </p>
+  </div>

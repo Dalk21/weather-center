@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "the-weather.xyz",
+  "version": "1.0.0",
+  "description": "Repository containing the source code of the-weather.xyz. Made by weather nerds for weather nerds.",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js",
+    "run": "node app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dalk21/weather-center.git"
+  },
+  "author": "GitHub/Dalk21",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dalk21/weather-center/issues"
+  },
+  "homepage": "https://github.com/Dalk21/weather-center#readme"
+}

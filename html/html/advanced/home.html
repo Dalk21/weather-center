@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manual Weather Center</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The weather, advanced!">
+        <meta name="description" content="Get the current weather advanced!">
+        <meta name="theme-color" content="#6c25be">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://the-weather.xyz/advanced">
+        <meta property="og:title" content="The weather, advanced!">
+        <meta property="og:description" content="Get the current weather advanced!">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://the-weather.xyz/advanced">
+        <meta property="twitter:title" content="The weather, advanced!">
+        <meta property="twitter:description" content="Get the current weather advanced!">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      .background {
+        background-image: url('https://the-weather.xyz/cdn/bg/1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.75);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+        max-width: 1000px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 300px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card::before {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .card:hover::before {
+        opacity: 0;
+      }
+
+      .card img {
+        border-radius: 50%;
+        height: 100px;
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 1px 1px 0 #ddd;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      .card button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5;
+        color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 80%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Weather Dashboard: Manual Mode</h1>
+    <div class="content">
+        <div class="card">
+            <h2>NWS Doppler Radar</h2>
+            <p>Get a radar, with every radar location in the US.</p>
+            <a href="/advanced/radar/doppler"><button>View Radar Radar</button></a>
+        </div>
+        <div class="card">
+            <h2>Tornado Radar</h2>
+            <p>Get radar with every (E)F5 tornado to hit the US.</p>
+            <a href="/advanced/radar/tornado"><button>View Tornado Radar</button></a>
+        </div>
+        <div class="card">
+            <h2>API</h2>
+            <p>View our API tools</p>
+            <a href="/api/home"><button>View API</button></a>
+        </div>
+      <div class="card">
+        <h2>Automatic</h2>
+        <p>Automatically get the weather for your area.</p>
+        <a href="/"><button>View Normal</button></a>
+    </div>
+    <div class="card">
+        <h2>Manual</h2>
+        <p>Manually get the weather for your area.</p>
+        <a href="/"><button>View Manual</button></a>
+    </div>
+  </div>
+</div>

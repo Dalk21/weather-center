@@ -1,0 +1,614 @@
+{
+    "tornadoes": [
+        {
+            "name": "1953 Waco Tornado",
+            "description": "Many large, multi-story buildings in downtown Waco were completely leveled, along with homes both north and south of Waco. First officially ranked F5 tornado in the United States",
+            "date": "May 11th, 1953",
+            "fatalities": 114,
+            "rating": "F5",
+            "locationName": "Waco, TX",
+            "locationZipCode":  76701,
+            "coordinates": [31.551389, -97.155833]
+        },
+        {
+            "name": "1953 North Dakota Tornado",
+            "description": "A large church was leveled and pews were jammed 4 ft (1.2 m) into the ground. Car parts were carried for 1⁄2 mi (0.80 km). The tornado was initially rated F4 by Grazulis, but he subsequently upgraded it to F5.",
+            "date": "May 29th, 1953",
+            "fatalities": 2,
+            "rating": "F5",
+            "locationName": "Fort Rice, ND",
+            "locationZipCode":  58554,
+            "coordinates": [46.5261324, -100.6049302]
+        },
+        {
+            "name": "1953 Michigan Tornado",
+            "description": "Entire blocks of homes were completely swept away, with only rows of bare slabs and empty basements remaining. Cycloidal ground scouring occurred as well.",
+            "date": "June 8th, 1953",
+            "fatalities": 116,
+            "rating": "F5",
+            "locationName": "Flushing Township, MI",
+            "locationZipCode":  48433,
+            "coordinates": [43.096944, -83.858056]
+        },
+        {
+            "name": "1953 Iowa Tornado",
+            "description": "Four farms were destroyed, with virtually nothing left at one of them. Heavy machinery was thrown hundreds of feet, and boards were driven into trees.",
+            "date": "June 27th, 1953",
+            "fatalities": 1,
+            "rating": "F5",
+            "locationName": "Adair, IA",
+            "locationZipCode":  50002,
+            "coordinates": [41.5, -94.643889]
+        },
+        {
+            "name": "1953 Vicksburg, Mississippi Tornado",
+            "description": "Many large brick buildings were leveled in downtown Vicksburg. The F5 rating is disputed by Grazulis, as the destroyed structures were frail.",
+            "date": "December 5th, 1953",
+            "fatalities": 38,
+            "rating": "F5",
+            "locationName": "Vicksburg, MS",
+            "locationZipCode":  39180,
+            "coordinates": [32.336111, -90.875278]
+        },
+        {
+            "name": "1955 Great Plains F5 #1",
+            "description": "Many homes and businesses were swept away in town.",
+            "date": "May 25th, 1955",
+            "fatalities": 20,
+            "rating": "F5",
+            "locationName": "Blackwell, OK",
+            "locationZipCode":  74631,
+            "coordinates": [36.801667, -97.289722]
+        },
+        {
+            "name": "1955 Great Plains F5 #2",
+            "description": "Many homes and businesses were swept away in town. Vehicles were thrown and stripped down to their frames, including a pickup truck that was partially wrapped around a tree. A 30-by-40-foot (9.1 by 12.2 m) concrete block building was obliterated, with the foundation left mostly bare.  Beams were also broken at a school building, and numerous trees were debarked",
+            "date": "May 25th, 1955",
+            "fatalities": 80,
+            "rating": "F5",
+            "locationName": "Udall, KS",
+            "locationZipCode":  67146,
+            "coordinates": [37.386944, -97.117778]
+        },
+        {
+            "name": "April 1956 Hudsonville-Standale tornado",
+            "description": "Many homes were swept completely away, leaving bare foundations behind. Extensive wind-rowing of debris was observed, and vehicles were tossed hundreds of yards as well. One home that was swept away had all of its tile flooring scoured from the foundation.  Grazulis lists this tornado as an F4 but notes that it 'probably produced F5 damage.'",
+            "date": "April 3rd, 1956",
+            "fatalities": 18,
+            "rating": "F5",
+            "locationName": "Hudsonville, MI",
+            "locationZipCode":  49426,
+            "coordinates": [42.870833, -85.865]
+        },
+        {
+            "name": "May 1956 Central Plains Tornado Outbreak, F5",
+            "description": "Entire rows of homes were swept away, with extensive wind-rowing of structural debris noted in nearby fields. Some homes had their anchor-bolted subflooring swept away as well, leaving only empty basements behind. A steel-reinforced school was partially leveled, and many shops and businesses sustained F5 damage. F4 damage occurred in both Kansas and Missouri, but the F5 damage was in Ruskin Heights and Hickman Mills",
+            "date": "May 20th, 1957",
+            "fatalities": 44,
+            "rating": "F5",
+            "locationName": "Princeton, KS",
+            "locationZipCode":  66078,
+            "coordinates": [38.488333, -95.270278]
+        },
+        {
+            "name": "Fargo Tornado",
+            "description": "Many homes were leveled, with some swept completely away. Part of the Golden Ridge subdivision in Fargo, where the F5 damage occurred, was swept away, with the debris scattered long distances into nearby fields. Fujita reportedly called this more intense than the 1965 Palm Sunday tornadoes he surveyed, some of which he rated F5 in the Chicago Damage Area Per Path Length (DAPPL). It was part of a family of five devastating tornadoes produced by one supercell over the course of 3.5 hours, although they are listed as one continuous tornado.",
+            "date": "June 20th, 1957",
+            "fatalities": 10,
+            "rating": "F5",
+            "locationName": "Fargo, ND",
+            "locationZipCode":  58102,
+            "coordinates": [46.873333, -96.827222]
+        },
+        {
+            "name": "Illinois F5",
+            "description": "The entire Sunfield community 'vanished.'",
+            "date": "December 18th, 1957",
+            "fatalities": 1,
+            "rating": "F5",
+            "locationName": "Sunfield, IL",
+            "locationZipCode":  62832,
+            "coordinates": [38.064444, -89.24]
+        },
+        {
+            "name": "Wisconsin F5",
+            "description": "Homes were swept away, and numerous trees were completely debarked. A car was wrapped around the side of a small steel bridge that collapsed in the tornado. Rated F4 by Grazulis.",
+            "date": "June 4th, 1958",
+            "fatalities": 21,
+            "rating": "F5",
+            "locationName": "Menomonie, WI",
+            "locationZipCode":  54751,
+            "coordinates": [44.879167, -91.918056]
+        },
+        {
+            "name": "Prague F5",
+            "description": "Homes were swept away, and an oil refinery was damaged.",
+            "date": "May 5th, 1960",
+            "fatalities": 5,
+            "rating": "F5",
+            "locationName": "Prague, OK",
+            "locationZipCode":  74864,
+            "coordinates": [35.486111, -96.687778]
+        },
+        {
+            "name": "Wichita Falls F5",
+            "description": "Homes were swept away, and a boxcar was thrown 100 yd (300 ft). A car was thrown a block and a half.",
+            "date": "April 3rd, 1964",
+            "fatalities": 7,
+            "rating": "F5",
+            "locationName": "Wichita Falls, TX",
+            "locationZipCode":  76301,
+            "coordinates": [33.909444, -98.499444]
+        },
+        {
+            "name": "Bradshaw F5",
+            "description": "Numerous farms were swept away.",
+            "date": "May 5th, 1964",
+            "fatalities": 4,
+            "rating": "F5",
+            "locationName": "Bradshaw, NE",
+            "locationZipCode":  68319,
+            "coordinates": [40.883611, -97.7475]
+        },
+        {
+            "name": "Gregory F5",
+            "description": "Many farms were destroyed, including three that were swept completely away.",
+            "date": "May 8th, 1965",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Gregory, SD",
+            "locationZipCode":  57533,
+            "coordinates": [43.232222, -99.430278]
+        },
+        {
+            "name": "Jackson F5",
+            "description": "Homes were swept away, and a brick church was obliterated. Pavement was scoured from roads, and cars were thrown more than half a mile from where they originated. The newly built Candlestick Park shopping center was leveled, and concrete masonry blocks were scattered for long distances. Steel girders were 'twisted like wet noodles' at a glass plant.",
+            "date": "March 3rd, 1966",
+            "fatalities": 57,
+            "rating": "F5",
+            "locationName": "Jackson, MS",
+            "locationZipCode":  39200,
+            "coordinates": [32.298889, -90.184722]
+        },
+        {
+            "name": "Topeka F5",
+            "description": "Entire rows of homes were swept away, vehicles were thrown long distances, and grass was scoured from lawns",
+            "date": "June 8th, 1966",
+            "fatalities": 16,
+            "rating": "F5",
+            "locationName": "Topeka, KS",
+            "locationZipCode":  66601,
+            "coordinates": [39.055833, -95.689444]
+        },
+        {
+            "name": "Belmond F5",
+            "description": "A house was swept away on the outskirts of town. However, the home was likely poorly anchored as debris was deposited in a neat pile near the foundation, and nearby homes only showed slight damage. The F5 rating is disputed; ranked F4 by Grazulis.",
+            "date": "Octobor 14th, 1966",
+            "fatalities": 6,
+            "rating": "F5",
+            "locationName": "Belmond, IA",
+            "locationZipCode":  50421,
+            "coordinates": [42.847222, -93.612222]
+        },
+        {
+            "name": "Wheelersburg F5",
+            "description": "Homes were swept away, with only their foundations left in some cases. A large metal electrical transmission tower was ripped off at the base and thrown. The F5 rating is disputed as structures swept away were not anchored properly.",
+            "date": "April 23rd, 1968",
+            "fatalities": 7,
+            "rating": "F5",
+            "locationName": "Whellersburg, OH",
+            "locationZipCode":  45694,
+            "coordinates": [38.733889, -82.8425]
+        },
+        {
+            "name": "Charles City F5",
+            "description": "Part of the May 1968 Tornado Outbreak: Many homes in town were swept away. Farms were swept away as well, and very intense multiple vortices were observed based upon ground damage patterns. Cycloidal ground scouring occurred where the multiple vortices were noted",
+            "date": "May 15th, 1968",
+            "fatalities": 13,
+            "rating": "F5",
+            "locationName": "Charles City, IA",
+            "locationZipCode":  50616,
+            "coordinates": [43.066389, -92.675833]
+        },
+        {
+            "name": "Oelwein F5",
+            "description": "Homes were swept completely away in both towns.",
+            "date": "May 15th, 1968",
+            "fatalities": 5,
+            "rating": "F5",
+            "locationName": "Oelwein, IA",
+            "locationZipCode":  50662,
+            "coordinates": [42.676944, -91.915833]
+        },
+        {
+            "name": "1968 Tracy F5",
+            "description": "111 homes were destroyed in town, with some swept away. A heavy boxcar was thrown more than a full block, and two others were thrown 300 yd (900 ft). A steel I-beam was carried for two miles on a piece of roof. Extensive ground scouring occurred outside of town, and several farms were swept completely away",
+            "date": "June 13th, 1968",
+            "fatalities": 9,
+            "rating": "F5",
+            "locationName": "Tracy, MN",
+            "locationZipCode":  56175,
+            "coordinates": [44.233333, -95.616667]
+        },
+        {
+            "name": "Lubbock F5",
+            "description": "Homes were swept away and a high-rise building suffered structural deformation. A 13-tonne (28,660 lb) metal fertilizer tank was thrown nearly 1 mi (1.6 km) through the air, and large oil tanks were carried for over 300 yd (900 ft). This tornado was originally rated F6, but was later downgraded to F5",
+            "date": "May 11th, 1970",
+            "fatalities": 26,
+            "rating": "F5",
+            "locationName": "Lubbock, TX",
+            "locationZipCode":  79401,
+            "coordinates": [33.577778, -101.89]
+        },
+        {
+            "name": "Delhi F5",
+            "description": "Only official F5 in Louisiana history, but the rating is questioned by Grazulis, who assigned an F4 rating. The only F5 damage to be officially documented occurred in Louisiana where homes were completely leveled east of Delhi; F4-level damage occurred across the state line in Mississippi.",
+            "date": "February 21st, 1971",
+            "fatalities": 47,
+            "rating": "F5",
+            "locationName": "Delhi, LA",
+            "locationZipCode":  71232,
+            "coordinates": [32.455948, -91.493345]
+        },
+        {
+            "name": "Valley Mills F5",
+            "description": "Rating applied by wind engineers. Two barns were leveled and a pickup truck was carried .5 mi (0.80 km) through the air. Another was carried for 200 yd (600 ft).",
+            "date": "May 6th, 1973",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Valley Mills, TX",
+            "locationZipCode":  76689,
+            "coordinates": [31.6575, -97.4725]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #1",
+            "description": "Homes were swept completely away, and entire farms were leveled.",
+            "date": "April 3rd, 1974",
+            "fatalities": 6,
+            "rating": "F5",
+            "locationName": "Depauw, IN",
+            "locationZipCode":  47115,
+            "coordinates": [38.335167, -86.217528]
+        },
+        {
+            "name": "1974 Xenia Tornado (1974 Super Outbreak F5 #2)",
+            "description": "Aerial photography and isoline surveys by Fujita showed that entire rows of brick homes were swept away and sustained F5 damage. Wind-rowing of debris occurred in nearby fields, and very intense damage was reported to steel-reinforced schools. This tornado was originally rated F6 by Fujita, but was later downgraded to F5.",
+            "date": "April 3rd, 1974",
+            "fatalities": 32,
+            "rating": "F5",
+            "locationName": "Xenia, OH",
+            "locationZipCode":  45385,
+            "coordinates": [39.684722, -83.929722]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #3",
+            "description": "Multiple well-built, anchor-bolted homes were swept away, including one that sustained total collapse of its poured concrete walk-out basement wall. Grass was scoured from the ground, and aerial photography showed extensive wind-rowing in Brandenburg. Trees were completely debarked, and low-lying shrubs next to leveled homes were uprooted and stripped. Multiple vehicles were also thrown hundreds of yards and stripped down to their frames.",
+            "date": "April 3rd, 1974",
+            "fatalities": 31,
+            "rating": "F5",
+            "locationName": "Hardinsburg, KY",
+            "locationZipCode":  40143,
+            "coordinates": [37.776389, -86.455]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #4",
+            "description": "Homes were swept away, and a large floating restaurant barge was lifted, ripped from its moorings, and flipped upside-down by the tornado. Boats and vehicles were carried long distances through the air.",
+            "date": "April 3rd, 1974",
+            "fatalities": 3,
+            "rating": "F5",
+            "locationName": "Rising Sun, IN/OH",
+            "locationZipCode":  47040,
+            "coordinates": [38.95, -84.856667]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #5",
+            "description": "Numerous homes were swept away and scattered. In Limestone County, where the F5 damage occurred, a large swath of trees was leveled, and ground scouring occurred nearby with dirt found to have been dug up and plastered to the bark, and a pump was lifted out of a well at one location. Shrubbery was debarked as well.",
+            "date": "April 3rd, 1974",
+            "fatalities": 28,
+            "rating": "F5",
+            "locationName": "Mount Hope, AL",
+            "locationZipCode":  35651,
+            "coordinates": [34.458333, -87.481667]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #6",
+            "description": "Officially listed as an F5, but rated an F4 by Grazulis and Fujita. Crossed into Tennessee and did F4 damage in both states, though the supposed F5 damage only occurred in Alabama, where numerous homes were swept away and extensive wind-rowing of debris occurred. Some of the damage in Tennessee was previously rated F5, but later downgraded to F4.",
+            "date": "April 3rd, 1974",
+            "fatalities": 22,
+            "rating": "F5",
+            "locationName": "Tanner, AL",
+            "locationZipCode":  35671,
+            "coordinates": [34.731389, -86.970556]
+        },
+        {
+            "name": "1974 Super Outbreak F5 #7",
+            "description": "According to the NWS in Birmingham, Alabama, this is considered one of the strongest tornadoes ever to impact the United States. Sources indicate that F5 damage was reported along much of the path, and that many homes in and near Guin sustained F5 damage. Many of these homes were swept away, their debris being scattered across fields, and some reportedly had their 'foundations dislodged and in some cases swept away as well.' Nothing was left of the Guin Mobile Home Plant but a pile of mangled beams. Additionally, photographs showed intense wind-rowing from suction vortices. The path of the tornado was visible in satellite imagery, as thousands of trees, including in the Bankhead National Forest, were snapped.",
+            "date": "April 3rd, 1974",
+            "fatalities": 28,
+            "rating": "F5",
+            "locationName": "Guin, AL",
+            "locationZipCode":  35563,
+            "coordinates": [33.973135, -87.916711]
+        },
+        {
+            "name": "Sprio F5",
+            "description": "Frame homes were swept away, and 134,000-pound (60,780 kg) coal cars were tossed. Rated F4 by Grazulis.",
+            "date": "March 26th, 1976",
+            "fatalities": 2,
+            "rating": "F5",
+            "locationName": "Spiro, OK",
+            "locationZipCode":  74959,
+            "coordinates": [35.241389, -94.620833]
+        },
+        {
+            "name": "Brownwood F5",
+            "description": "Homes were swept away, with only a bathtub remaining on one of the foundations. Several teenagers were caught in the open and were picked up and thrown 1,000 yd (0.57 mi) but survived. Rated F4 by Grazulis.",
+            "date": "April 19th, 1976",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Brownwood, TX",
+            "locationZipCode":  76801,
+            "coordinates": [31.709444, -98.991111]
+        },
+        {
+            "name": "Jordan F5",
+            "description": "Homes were swept away. This tornado was mentioned by Fujita as one of the most intense he surveyed. Well-built farms reportedly vanished without a trace.",
+            "date": "June 13th, 1976",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Jordan, IA",
+            "locationZipCode":  50036,
+            "coordinates": [42.049167, -93.784167]
+        },
+        {
+            "name": "Birmingham F5 of 1977",
+            "description": "Many homes were swept away, some of which had all of their cinder block walk-out basement walls completely swept away as well. Trees were debarked and two dump trucks were thrown through the air.",
+            "date": "April 4th, 1977",
+            "fatalities": 22,
+            "rating": "F5",
+            "locationName": "Birmingham, AL",
+            "locationZipCode":  35201,
+            "coordinates": [33.5175, -86.809444]
+        },
+        {
+            "name": "Broken Bow F5",
+            "description": "A house was swept away with only carpet tacks left on the empty foundation. The F5 rating is disputed because the home was likely not anchored properly and its destruction may not even warrant an F4 rating. Other houses suffered F4 damage.",
+            "date": "April 2nd, 1982",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Broken Bow, OK",
+            "locationZipCode":  74728,
+            "coordinates": [34.029722, -94.737778]
+        },
+        {
+            "name": "Barnevald F5",
+            "description": "A cul-de-sac of newly built homes was swept away, and vehicles were thrown hundreds of yards. Small trees were debarked as well.",
+            "date": "June 7-8th, 1984",
+            "fatalities": 9,
+            "rating": "F5",
+            "locationName": "Barnevald, WI",
+            "locationZipCode":  53507,
+            "coordinates": [43.014167, -89.895556]
+        },
+        {
+            "name": "Niles F5",
+            "description": "This tornado caused F5 damage along much of its path through Niles and Wheatland. A shopping center in Niles was obliterated, sustaining F5 damage and several deaths. Metal girders at the center twisted and buckled. Well-built, anchor-bolted homes were swept away, and 75,000-pound (34,020 kg) petroleum storage tanks were ripped from their anchors and thrown hundreds of feet. Pavement was scoured from a parking lot, and a steel-frame trucking plant was obliterated and partially swept away with the beams severely mangled. Routing slips from the plant were found wedged into the remaining asphalt of the parking lot. An airplane wing was carried 10 miles (16 km) from where it originated. This remains the only F5 or EF5 in Pennsylvania history.",
+            "date": "May 31st, 1985",
+            "fatalities": 18,
+            "rating": "F5",
+            "locationName": "Niles, OH",
+            "locationZipCode":  44446,
+            "coordinates": [41.185278, -80.757222]
+        },
+        {
+            "name": "Castleton F5",
+            "description": "Many homes and businesses were swept away in town with only slabs and empty basements remaining. Industrial buildings were obliterated and vehicles were thrown hundreds of yards and stripped down to their frames.",
+            "date": "March 13th, 1990",
+            "fatalities": 1,
+            "rating": "F5",
+            "locationName": "Castleton, KS",
+            "locationZipCode":  67501,
+            "coordinates": [37.867778, -97.969167]
+        },
+        {
+            "name": "Goessel F5",
+            "description": "Homes were obliterated and swept away, but the F5 rating was assigned due to very intense cycloidal ground scouring. Considered by some sources to be one of the strongest tornadoes ever surveyed at the time, though little detailed information about the damage is available.",
+            "date": "March 13th, 1990",
+            "fatalities": 1,
+            "rating": "F5",
+            "locationName": "Goessel, KS",
+            "locationZipCode":  67053,
+            "coordinates": [38.246399, -97.348923]
+        },
+        {
+            "name": "Plainfield F5",
+            "description": " A mature corn crop was scoured from the ground, leaving nothing but bare soil behind. Several inches of topsoil were blown away as well. A 20-tonne (20,000 kg) tractor trailer was tossed from a road and thrown more than 1⁄2 mi (0.80 km), and vehicles were picked up and carried through the air. The F5 rating is based solely upon the extreme ground scouring; areas in Plainfield sustained high-end F4 structural damage, though the ground scouring nearby was much less intense than where the corn crop was obliterated. Fujita considered the intensity of the ground scouring 'comparable to the worst he had seen.'",
+            "date": "August 28th, 1990",
+            "fatalities": 29,
+            "rating": "F5",
+            "locationName": "Plainfield, IL",
+            "locationZipCode":  60544,
+            "coordinates": [41.617222, -88.233333]
+        },
+        {
+            "name": "Haysville F5",
+            "description": "Many large, well-built homes with anchor bolts were swept away, leaving bare foundations behind, and grass was scoured from the ground. Extensive wind-rowing of debris occurred, leaving streaks of debris extending away from empty foundations. Trees and small twigs were completely stripped of their bark. Vehicles were thrown up to 3⁄4 mi (1.2 km) from where they originated and were mangled beyond recognition.",
+            "date": "April 26th, 1991",
+            "fatalities": 17,
+            "rating": "F5",
+            "locationName": "Haysville, KS",
+            "locationZipCode":  67060,
+            "coordinates": [37.563889, -97.353056]
+        },
+        {
+            "name": "Chandler F5",
+            "description": "Multiple homes were swept away, and vehicles were thrown and stripped down to their frames.",
+            "date": "June 16th, 1992",
+            "fatalities": 1,
+            "rating": "F5",
+            "locationName": "Chandler, MN",
+            "locationZipCode":  56122,
+            "coordinates": [43.929167, -95.947222]
+        },
+        {
+            "name": "Oakfield F5",
+            "description": "Well-built homes with anchor bolts were swept away, including one where rebar supports were bent over at a 90-degree angle. Vehicles were thrown up to 400 yd (1,200 ft) through the air and mangled beyond recognition. Crops were scoured to 1-inch stubble.",
+            "date": "July 18th, 1996",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Oakfield, WI",
+            "locationZipCode":  53065,
+            "coordinates": [43.684194, -88.548306]
+        },
+        {
+            "name": "Jarrell Tornado",
+            "description": "Produced some of the most extreme damage ever documented. An entire subdivision of well-built homes was swept completely away with very little debris remaining. Some of the homes were well-bolted to their foundations. Long expanses of pavement were torn from roads, and a large swath of ground was scoured out to a depth of 18 in (0.46 m). Vehicles were torn apart and scattered across fields, and a recycling plant was obliterated. The tornado was very slow-moving, which may have exacerbated the destruction to some extent.",
+            "date": "May 27th, 1997",
+            "fatalities": 27,
+            "rating": "F5",
+            "locationName": "Jarrell, TX",
+            "locationZipCode":  76537,
+            "coordinates": [30.827778, -97.606667]
+        },
+        {
+            "name": "April 1998 Birmingham Tornado",
+            "description": "Many homes were swept away along the path.",
+            "date": "April 8th, 1998",
+            "fatalities": 32,
+            "rating": "F5",
+            "locationName": "Birmingham, AL",
+            "locationZipCode":  35201,
+            "coordinates": [33.5175, -86.85]
+        },
+        {
+            "name": "Nashville Tornado Outbreak F5",
+            "description": "This tornado produced extreme damage at ground level. Many large and well-built homes with anchor bolts were swept away, and vehicles were thrown hundreds of yards. A swath of grass 200 ft (67 yd) wide was scoured from the ground, with nothing but bare soil and clumps of dirt remaining. This tornado is the only official F5 tornado ever recorded in Tennessee.",
+            "date": "April 16th, 1998",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Wayne County, TN",
+            "locationZipCode":  38485,
+            "coordinates": [35.24, -87.79]
+        },
+        {
+            "name": "May 3rd Newcastle-Moore Tornado",
+            "description": "Mobile radar recorded winds up to 302 ± 22 mph (486 ± 35 km/h), which is the highest wind speed ever measured on Earth. Many homes were swept completely away, some of which were well-bolted to their foundations, and debris from some homes was finely granulated. Severe ground and pavement scouring occurred, trees and shrubs were completely debarked, and vehicles were thrown up to 440 yd (402 m) from where they originated. An airplane wing was carried for several miles, and a 36,000-pound (16,329 kg) freight car was bounced 3/4 of a mile. This was the 50th and last tornado to be officially rated F5 on the Fujita scale in the United States before the introduction of the Enhanced Fujita Scale in 2007.",
+            "date": "May 3rd, 1999",
+            "fatalities": 36,
+            "rating": "F5",
+            "locationName": "Moore, OK",
+            "locationZipCode":  73160,
+            "coordinates": [35.338889, -97.4875]
+        },
+        {
+            "name": "Greensburg Tornado",
+            "description": "This tornado destroyed 95% of the town, including seven well-built homes with anchor bolts that were swept away. Vehicles were thrown hundreds of yards and mangled, several freight train cars were overturned, and multi-ton oil tanks were destroyed. Fire hydrants were ripped from the ground in town, and large trees were completely denuded and debarked as well. This was the first tornado to have been rated EF5 after the retirement of the original Fujita Scale in the United States in February 2007. Aerial views of the tornado's path showed spiral and erratic paths from suction vortices in fields before it hit Greensburg; the area was partially scoured with some vegetation removed.",
+            "date": "May 4th, 2007",
+            "fatalities": 11,
+            "rating": "EF5",
+            "locationName": "Greensburg, KS",
+            "locationZipCode":  67054,
+            "coordinates": [37.602778, -99.2925]
+        },
+        {
+            "name": "Elie, Manitoba Tornado",
+            "description": "Two homes were swept away, including one that was well-bolted to its foundation. A few of the bolts themselves were snapped off. A van was thrown 150 metres (490 ft) through the air, and nearby trees were debarked as well. Only officially rated F5 tornado in Canada. Last tornado to be rated F5 due to Environment Canada utilizing the Enhanced Fujita Scale beginning April 1, 2013.",
+            "date": "June 22, 2007",
+            "fatalities": 0,
+            "rating": "F5",
+            "locationName": "Elie, MB, Canada",
+            "locationZipCode":  0,
+            "coordinates": [49.901667, -97.758056]
+        },
+        {
+            "name": "Parkersburg Tornado",
+            "description": "Well-built homes with anchor bolts were swept away, 17 of which were assessed to have sustained EF5 damage. Two of them had no visible debris left anywhere near the foundations. A concrete walk-out basement wall was pushed over at one home, and the concrete floor was cracked. A rebar support set into the foundation of another home was found snapped in half, and reinforced concrete light poles were snapped and dragged along the ground. A large industrial building was completely destroyed, with metal beams twisted and sheared off at their bases, and the foundation pushed clean of the metal framing and debris. Vehicles were thrown long distances and stripped down to their frames as well. Additionally, a large field east of Parkersburg was filled with finely granulated debris that was wind-rowed in long streaks, trees were completely debarked, and shrubs were uprooted and stripped in some areas.",
+            "date": "May 25th, 2008",
+            "fatalities": 9,
+            "rating": "EF5",
+            "locationName": "Parkersburg, IA",
+            "locationZipCode":  50665,
+            "coordinates": [42.574444, -92.786667]
+        },
+        {
+            "name": "2011 Philadelphia, Mississippi tornado (4/27/2011 Tornado Outbreak)",
+            "description": "Rated EF5 based upon extreme ground scouring. The tornado dug a trench 2 ft (0.61 m) deep into a pasture, leaving nothing but large clumps of dirt and bare topsoil behind. A tied-down mobile home was lofted through the air and carried 300 yd (274 m), with no indication of contact with the ground. Several vehicles were tossed hundreds of yards and wrapped around trees, and a steel I-beam was twisted and embedded into the ground. Pavement was scoured from roads as well, and extreme debarking and denuding of trees occurred, some of which were ripped out of the ground and thrown up to 20 yards away.",
+            "date": "April 27th, 2011",
+            "fatalities": 3,
+            "rating": "EF5",
+            "locationName": "Philadelphia, MS",
+            "locationZipCode":  39350,
+            "coordinates": [32.774167, -89.112778]
+        },
+        {
+            "name": "2011 Smithville, Mississippi tornado (4/27/2011 Tornado Outbreak)",
+            "description": "This tornado produced some of the most violent damage ever documented. Numerous well-built, anchor-bolted brick homes were swept away. Floor tiles were ripped from the foundations of several homes. An SUV was thrown half a mile into the top of the town's water tower, and was recovered on the opposite side of town. Other vehicles were torn into multiple pieces, stripped down to their frames, wrapped around trees, or simply never recovered. In the most intense damage area, all plumbing and appliances at home-sites were 'shredded or missing', and debris was finely granulated. Chip and tar pavement was torn from road, large trees were completely debarked. A large brick funeral home was reduced to a bare slab, and extensive wind-rowing of debris occurred next to the foundation. Outside of town, the ground was deeply scoured in an open field. Additionally, low-lying vegetation and shrubbery was completely debarked and shredded.",
+            "date": "April 27th, 2011",
+            "fatalities": 23,
+            "rating": "EF5",
+            "locationName": "Smithville, MS",
+            "locationZipCode":  38870,
+            "coordinates": [34.068611, -88.395556]
+        },
+        {
+            "name": "2011 Hackleburg-Phil Campbell tornado (4/27/2011 Tornado Outbreak)",
+            "description": "This was the deadliest tornado in Alabama history. Numerous homes, some of which were large, well-built, and anchor-bolted were swept away. Debris from some obliterated homes was scattered and wind-rowed well away from the foundations. One home that was swept away had its concrete stemwalls sheared off at ground level. Vehicles were thrown at least 200 yd (183 m), and at least one large vehicle that was missing after the tornado was never located. Hundreds of trees were completely debarked and twisted, and in some cases were reduced only to stubs. Pavement was scoured from roads as well, a large industrial plant was leveled to the ground, and a restaurant that was swept away had a small portion of its foundation slab torn apart.",
+            "date": "April 27th, 2011",
+            "fatalities": 72,
+            "rating": "EF5",
+            "locationName": "Phil Campbell, AL",
+            "locationZipCode":  35581,
+            "coordinates": [34.351389, -87.7075]
+        },
+        {
+            "name": "2011 Fyffe-Rainsville-Sylvania-Ider, Alabama/Rising Fawn, Georgia tornado (4/27/2011 Tornado Outbreak)",
+            "description": "Many homes were swept away, some of which had their concrete porches torn away and shattered, with debris strewn up to a mile away from the foundations in some cases. A few of the homes were bolted to their foundations. An 800-pound (363 kg) safe was ripped from its anchors and thrown 600 ft (183 m), and its door was ripped from its frame. Ground scouring occurred, and sidewalk pavement was pulled up. A pickup truck was tossed 250 yd (750 ft) and torn apart. An underground storm shelter had much of its dirt covering scoured away and was heaved slightly out of the ground, and pavement was scoured from roads. One well-built stone house was obliterated, and a stone pillar was ripped completely out of the ground at that residence, pulling up a section of house foundation in the process.",
+            "date": "April 27th, 2011",
+            "fatalities": 25,
+            "rating": "EF5",
+            "locationName": "Rainsville, AL",
+            "locationZipCode":  35986,
+            "coordinates": [34.492258, -85.845316]
+        },
+        {
+            "name": "Joplin EF5",
+            "description": "Deadliest tornado in the United States since 1947. Many homes, business, and steel-frame industrial buildings were swept away, and large vehicles including semi-trucks and buses were thrown hundreds of yards. A large multi-story hospital had its foundation and underpinning system so severely damaged that it was structurally compromised and had to be torn down. Reinforced concrete porches were deformed, lifted, and tossed, and 300-pound (136 kg) concrete parking stops anchored with rebar were ripped from parking lots and tossed well over 100 ft (30 m). Vehicles were thrown several blocks away from the residences where they originated, and a few were never recovered. Damage to driveways was noted at some residences as well. A large steel-reinforced concrete 'step and floor structure' leading to one building was warped slightly and cracked. Ground and pavement scouring occurred, and heavy manhole covers were removed from roads as well. On June 10, 2013, an engineering study found no evidence of EF5 structural damage in Joplin due to the poor quality of construction of many buildings. However, the EF5 rating stood as the National Weather Service in Springfield, Missouri, stated that survey teams found only a very small area of EF5 structural damage (at and around the hospital) and that it could have easily been missed in the survey, and the EF5 rating was mainly based on large vehicles being thrown long distances, along with non-conventional, non-structural instances of damage, such as removal of manhole covers, pavement, concrete porches, driveways, and parking stops, and the presence of wind-rowed debris.",
+            "date": "May 22nd, 2011",
+            "fatalities": 158,
+            "rating": "EF5",
+            "locationName": "Joplin, MS",
+            "locationZipCode":  64801,
+            "coordinates": [37.084167, -94.513056]
+        },
+        {
+            "name": "2011 Hinton-El Reno-Piedmont-Guthrie, Oklahoma tornado",
+            "description": "Many homes were swept away, trees were completely debarked, and extensive ground scouring occurred. At the Cactus 117 oil rig, a 1,900,000-pound (861,830 kg) oil derrick was blown over and rolled several times. Cars were thrown long distances and wrapped around trees, including an SUV that was thrown 780 yd (713 m) and had its body ripped from the frame. Several cars near the beginning of the path were thrown more than 1,093 yd (0.62 mi). Additionally, a 20,000-pound (9,072 kg) oil tanker truck was thrown approximately 1 mi (1.6 km). Mobile Doppler radar indicated wind speeds as high as 295 mph (475 km/h).",
+            "date": "May 24th, 2011",
+            "fatalities": 9,
+            "rating": "EF5",
+            "locationName": "Piedmont, OK",
+            "locationZipCode":  73078,
+            "coordinates": [35.674167, -97.7525]
+        },
+        {
+            "name": "2013 Moore Tornado",
+            "description": "Many homes were swept away, including nine that were well-built and bolted to their foundations and two elementary schools were completely destroyed.[123] Extensive ground scouring occurred with only bare soil left in some areas, and a 10-tonne (10,000 kg) propane tank was thrown more than 1⁄2 mi (0.80 km) through the air. Trees and shrubs were completely debarked, wind-rowing of debris was noted, and an oil tank was thrown a full mile from a production site, while another was never found. A manhole cover was removed near Moore Medical Center, and vehicles were thrown hundreds of yards and torn into multiple pieces",
+            "date": "May 20th, 2013",
+            "fatalities": 24,
+            "rating": "EF5",
+            "locationName": "Moore, OK",
+            "locationZipCode":  73160,
+            "coordinates": [35.338889, -97.4880]
+        },
+        {
+            "name": "2013 El Reno Tornado",
+            "description": "Largest tornado on record at 2.6 miles (4.2 km) wide. Initially rated EF5 based solely on mobile Doppler radar measurements, which recorded winds over 302 miles per hour (486 km/h). However, the most significant structural damage was rated EF3, as the tornado did not strike any buildings when the EF5 winds were recorded. The rating was eventually downgraded to EF3 because of this, though the practicality of the downgrade has been disputed by some meteorologists.",
+            "date": "May 31st, 2013",
+            "fatalities": 8,
+            "rating": "EF3",
+            "locationName": "El Reno, OK",
+            "locationZipCode":  73036,
+            "coordinates": [35.532222, -97.955]
+        }
+    ]
+}

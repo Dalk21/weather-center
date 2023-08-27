@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekly Forecast</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The weather, this week!">
+        <meta name="description" content="Get the weather conditions for this week!">
+        <meta name="theme-color" content="#6c25be">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://the-weather.xyz/weekly">
+        <meta property="og:title" content="The weather, right now!">
+        <meta property="og:description" content="Get the weather conditions for this week!">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://the-weather.xyz/weekly">
+        <meta property="twitter:title" content="The weather, for this week!">
+        <meta property="twitter:description" content="Get the weather conditions for this week!">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      
+      /* CSS styles */
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #fff;
+      }
+
+      h1 {
+        margin: 20px 0;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 0 #000;
+      }
+
+      .weather-info {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .weather-info img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100px;
+      }
+
+      .weather-info h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 1px 1px 0 #ddd;
+        text-transform: uppercase;
+      }
+
+      .weather-info p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      .weather-info p:first-of-type {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0 10px;
+        text-shadow: 1px 1px 0 #ddd;
+      }
+
+      .error {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .background {
+        background-image: url('https://the-weather.xyz/cdn/bg/2');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 300%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .content {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 36px;
+        }
+
+        .weather-info {
+          max-width: 300px;
+        }
+
+        .weather-info img {
+          max-width: 80px;
+        }
+
+        .weather-info h2 {
+          font-size: 20px;
+        }
+
+        .weather-info p:first-of-type {
+          font-size: 20px;
+        }
+
+        .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.alert {
+    color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.alert h2 {
+    color: #fff;
+  margin-top: 0;
+}
+
+.alert p {
+  margin-bottom: 0;
+}
+
+.alert strong {
+  font-weight: bold;
+}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Weather Alerts</h1>
+        <form onsubmit="event.preventDefault(); forecast(document.getElementById('city').value)">
+            <input type="text" id="city" placeholder="Enter a city name">
+            <button type="submit" id="bttn">Get Alerts</button>
+          </form>
+        <div id="alert-list">
+            <p>Welcome</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const alertList = document.getElementById('alert-list');
+
+// Get user's current location
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showAlerts);
+} else {
+  alertList.innerHTML = '<p>Geolocation is not supported by this browser.</p>';
+}
+
+function forecast(city) {
+        fetch(`https://nominatim.openstreetmap.org/search.php?q=${encodeURIComponent(city)}&format=jsonv2&limit=1`)
+          .then(response => response.json())
+          .then((data_50) => {
+            const latitude = data_50[0].lat;
+        const longitude = data_50[0].lon;
+
+  // Get grid point for location
+  fetch(`https://api.weather.gov/alerts/active?point=${latitude},${longitude}`)
+    .then(response => response.json())
+    .then(data => {
+          const alerts = data.features;
+
+          // Display weather alerts
+          if (alerts.length > 0) {
+            alertList.innerHTML = '';
+            alerts.forEach(alert => {
+              const { event, headline, description, instruction } = alert.properties;
+              const alertElement = `
+                <div class="alert">
+                  <h2>${event} - ${headline}</h2>
+                  <p>${description}</p>
+                  <p><strong>Instructions:</strong> ${instruction}</p>
+                </div>
+              `;
+              alertList.innerHTML += alertElement;
+            });
+          } else {
+            alertList.innerHTML = '<p>No weather alerts for this location.</p>';
+          }})
+        .catch(error => {
+          alertList.innerHTML = `<p>Failed to retrieve weather alerts: ${error.message}</p>`;
+        });
+})};
+    </script>

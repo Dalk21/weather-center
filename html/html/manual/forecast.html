@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manual Weather Forecast</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The weather, right now, manually!">
+        <meta name="description" content="Get the current weather forecast, manually!">
+        <meta name="theme-color" content="#6c25be">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://the-weather.xyz/manual/forecast">
+        <meta property="og:title" content="The weather, right now, manually!">
+        <meta property="og:description" content="Get the current weather forecast, manually!">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://the-weather.xyz/manual/forecast">
+        <meta property="twitter:title" content="The weather, right now, manually!">
+        <meta property="twitter:description" content="Get the current weather conditions, manually!">
+        <link rel="icon" type="image/x-icon" href="https://the-weather.xyz/cdn/favicon">
+    <style>
+      
+      /* CSS styles */
+      @font-face {
+        font-family: 'custom';
+        src: url('https://the-weather.xyz/cdn/font');
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'custom';
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+
+      h1 {
+        margin: 20px 0;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 0 #000;
+      }
+
+      .weather-info {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .weather-info img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100px;
+      }
+
+      .weather-info h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 1px 1px 0 #ddd;
+        text-transform: uppercase;
+      }
+
+      .weather-info p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      .weather-info p:first-of-type {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0 10px;
+        text-shadow: 1px 1px 0 #ddd;
+      }
+
+      .error {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .background {
+        background-image: url('https://the-weather.xyz/cdn/bg/2');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+      }
+
+      .content {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 36px;
+        }
+
+        .weather-info {
+          max-width: 300px;
+        }
+
+        .weather-info img {
+          max-width: 80px;
+        }
+
+        .weather-info h2 {
+          font-size: 20px;
+        }
+
+        .weather-info p:first-of-type {
+          font-size: 20px;
+        }
+
+        .container {
+          padding: 20px;
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="container">
+      <h1 id="wttrfc">Weather Forecast</h1>
+      <form onsubmit="event.preventDefault(); forecast(document.getElementById('city').value)">
+        <input type="text" id="city" placeholder="Enter a city name">
+        <button type="submit" id="bttn">Get Forecast</button>
+      </form>
+      <br>
+      <div class="weather-info"></div>
+    </div>
+    <script>
+      // JavaScript code
+      function forecast(city) {
+        fetch(`https://nominatim.openstreetmap.org/search.php?q=${encodeURIComponent(city)}&format=jsonv2&limit=1`)
+          .then(response => response.json())
+          .then((data_50) => {
+        const lat = data_50[0].lat;
+        const lon = data_50[0].lon;
+        const pointsUrl = `https://api.weather.gov/points/${lat},${lon}`;
+        fetch(pointsUrl, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0', // required by the API
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            const gridUrl = data.properties.forecast;
+            const gridX = data.properties.gridX;
+            const gridY = data.properties.gridY;
+            const forecastUrl = `${gridUrl}`;
+            fetch(forecastUrl, {
+              headers: {
+                'User-Agent': 'Mozilla/5.0', // required by the API
+                'Accept': 'application/ld+json', // to get JSON data
+              },
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                fetch(`https://nominatim.openstreetmap.org/search.php?q=${encodeURIComponent(lat)},${encodeURIComponent(lon)}&format=jsonv2&limit=1`)
+          .then(response => response.json())
+          .then((data_50) => {
+              document.getElementById('wttrfc').innerText = `Weather Forecast for ${data_50[0].display_name}`
+          })
+          .catch(error => console.log(error))
+                const weather = data.periods[0];
+                const weatherInfoEl = document.querySelector('.weather-info');
+                const iconUrl = weather.icon;
+                const weatherIconEl = document.createElement('img');
+                weatherIconEl.src = iconUrl;
+                weatherInfoEl.appendChild(weatherIconEl);
+                const weatherNameEl = document.createElement('h2');
+                weatherNameEl.textContent = weather.name;
+                weatherInfoEl.appendChild(weatherNameEl);
+                const weatherTempEl = document.createElement('p');
+                weatherTempEl.textContent = `${weather.temperature}°${weather.temperatureUnit}`;
+                weatherInfoEl.appendChild(weatherTempEl);
+                const weatherDescEl = document.createElement('p');
+                weatherDescEl.textContent = weather.detailedForecast;
+                weatherInfoEl.appendChild(weatherDescEl);
+              });
+          })
+          .catch(error => console.log(error));
+      }
+      );
+      }
+      
+    </script>
+    
